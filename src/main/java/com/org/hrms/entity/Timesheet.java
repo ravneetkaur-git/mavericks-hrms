@@ -6,6 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import java.time.YearMonth;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,9 +26,13 @@ public class Timesheet {
   @OneToOne
   private Employee employee;
   private String projectName;
+  private YearMonth month;
   private double billableHours;
   private double nonBillableHours;
   private int leaves;
   private int extraWorkingDays;
+  private int totalWorkingDays;
   private String comments;
+
+
 }

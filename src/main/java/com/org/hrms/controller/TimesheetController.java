@@ -7,6 +7,7 @@ import com.org.hrms.dto.response.MenteesTimesheet;
 import com.org.hrms.dto.response.SuccessResponse;
 import com.org.hrms.dto.response.TimesheetResponse;
 import com.org.hrms.service.TimesheetService;
+import java.time.YearMonth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,8 +32,9 @@ public class TimesheetController {
   }
 
   @GetMapping("get-timesheet")
-  private ResponseEntity<TimesheetResponse> getTimesheet(@RequestParam Integer id) {
-    TimesheetResponse timesheetResponse = timesheetService.getTimesheetById(id);
+  private ResponseEntity<TimesheetResponse> getTimesheet(@RequestParam Integer id, @RequestParam
+      YearMonth month) {
+    TimesheetResponse timesheetResponse = timesheetService.getTimesheetById(id, month);
     return ResponseEntity.ok(timesheetResponse);
   }
 
