@@ -33,3 +33,14 @@ java -jar target/hrms-0.0.1-SNAPSHOT.jar
 
 Testing APIs:
 Use Postman or any REST API client to test the implemented APIs.
+
+Credentials for Testing:
+Employee
+email - reeva@gmail.com
+password - Reeva@123
+
+Manager
+email - himanshu@gmail.com
+password - Himanshu@123
+
+
